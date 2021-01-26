@@ -1,0 +1,37 @@
+@import "_variables";
+
+.main_Login{
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  width: 800px;
+  padding: 0.5%;
+  background: map-get($main_gradient,"L_R");
+  color: white;
+  .registration{
+    height: 600px;
+    margin:2%;
+    padding: 0;
+    z-index: 2;
+  }
+  .form-reg{
+    input{
+      width: 250px;
+    }
+    align-items: center;
+    button{
+      margin-left: 10%;
+    }
+    a{
+      margin-left: 10%;
+    }
+  }
+  .reg_image{
+    
+    img{
+      right:18%;
+      top:35%;
+      z-index: 1;
+    }
+  }
+}

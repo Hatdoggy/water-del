@@ -1,0 +1,146 @@
+
+@import "_reg";
+@import "_variables";
+@import "_circles";
+@import "_queries";
+@import "_Login";
+@import "_header";
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+		text-decoration: underline;
+	}
+	&:focus {
+		text-decoration: none;
+		color: inherit;
+	}
+	&:active {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+body {
+  margin: 0px 0px 0px 0px;
+}
+
+#landing {
+	display: flex;
+	flex-wrap: wrap;
+	flex-flow: row;
+	background: map-get($main_gradient,"main");
+	justify-content: center;
+	align-items: center;
+	top: 100%;
+	font-family: Roboto;
+	position: relative;
+}
+.main_land {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255,.1);
+	top: 1px;
+	height: 400px;
+	margin: 3%;
+	padding: 5%;
+	border-radius: 50px;
+	color: white;
+	position: relative;
+	z-index: 1;
+}
+.text {
+	width: 40%;
+	height: auto;
+}
+.landingImg {
+	>img {
+		width: 45%;
+		height: auto;
+		position: absolute;
+		right: 3%;
+	}
+}
+button {
+	width: 80%;
+	height: auto;
+	padding: 1%;
+	border-radius: 20px;
+	margin: 10px;
+	border: none;
+}
+.dark {
+	font-weight: bold;
+	background-color: $dark;
+	color: white;
+	&:hover {
+		background-color: $bg_dark;
+	}
+}
+.light {
+	font-weight: bold;
+	background-color: white;
+	color: $dark;
+	&:hover {
+		background-color: #8ae6c5;
+		color: white;
+	}
+}
+
+label {
+	text-align: right;
+	clear: both;
+	margin-right: 15px;
+	display: table-cell;
+	width: 1px;
+	white-space: nowrap;
+}
+
+input {
+	border-radius: 50px;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	padding: 1%;
+	width: 100%;
+}
+
+span {
+	display: table-cell;
+	padding: 0 0 0 5px;
+}
+.form-reg {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 1%;
+	white-space: nowrap;
+	button{
+		margin-left: 10%;
+	}
+}
+.userInput {
+	margin: 3%;
+}
+.reg_text {
+	text-align: center;
+	color: white;
+	width: 20%;
+	position: absolute;
+	right: 25%;
+	top: 28%;
+}
+.reg_image {
+	>img {
+    width: $img;
+		height: auto;
+		position: absolute;
+		top: 45%;
+    right: 15%;
+		padding: 5%;
+	}
+}

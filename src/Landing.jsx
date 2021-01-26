@@ -1,7 +1,9 @@
 import React from 'react';
 import Circles from './Circles.jsx'
+import {Link} from "react-router-dom"
 
 export default function Landing(){
+
   return(<div>
     <Circles/>
     <div className="main_land">
@@ -13,8 +15,12 @@ export default function Landing(){
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tortor dui, luctus vitae sollicitudin ut, egestas id est. Nam vel fringilla mi. Sed vel accumsan metus, eu rhoncus neque. Fusce eget justo ipsum. Cras viverra, justo nec ornare lobortis, erat augue pretium tortor, sit amet imperdiet justo est nec tellus.</p>
 
         <div className="landing_btn">
-          <button className="dark">Learn More...</button>
-          <button className="light">Register</button>
+
+            <button className="dark">Learn More...</button>
+
+          <Link to="/register">
+            <button className="light">Register</button>
+          </Link>
         </div>
       </div>
 
