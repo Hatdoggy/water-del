@@ -8,6 +8,7 @@
   padding: 0.5%;
   background: map-get($main_gradient,"L_R");
   color: white;
+  margin-top:1%;
   .registration{
     height: 600px;
     margin:2%;
@@ -27,7 +28,7 @@
     }
   }
   .reg_image{
-    
+
     img{
       right:18%;
       top:35%;

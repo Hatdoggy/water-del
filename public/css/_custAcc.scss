@@ -1,0 +1,20 @@
+@import "_variables";
+
+.custAcc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .accDet{
+    display: flex;
+    flex-wrap: wrap;
+    .userInput{
+      input{
+        color:$dark;
+        border:1px solid $dark;
+      }
+      label{
+        color:$dark;
+      }
+    }
+  }
+}

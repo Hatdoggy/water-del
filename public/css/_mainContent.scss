@@ -1,0 +1,53 @@
+@import "_variables";
+
+.mainContent{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+  margin-top: 5%;
+  .stepContainer,.content{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.step{
+  border-radius: 50px;
+  border: 2px solid #3c4a61;
+  color: #3c4a61;
+  padding: 2%;
+  margin: 1%;
+  text-align: center;
+  h4{
+    font-weight: bold;
+  }
+}
+
+.stepContainer{
+  width: 80%;
+}
+
+.content{
+  .mainImg{
+    width: 50%;
+    height: auto;
+    margin-left: 10%;
+    img{
+      width: 400px;
+      height: auto;
+    }
+  }
+  .mainImgText{
+    color: $dark;
+    text-align: right;
+    margin-right: 15%;
+    margin-top: 10%;
+    button{
+      width: 35%;
+      float: right;
+    }
+  }
+}

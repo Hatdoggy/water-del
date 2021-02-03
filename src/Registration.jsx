@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Circles from './Circles.jsx'
 import Reg from "./Reg-form.jsx"
 import form_type from "./form_type.js"
+import {Link} from "react-router-dom"
 
 export default function Registration(){
 
@@ -24,7 +25,11 @@ export default function Registration(){
               {form_type.map((x,index) => (
                 <Reg key={index} for={x.for} label={x.label} name={x.name} id={x.id} type={x.type}/>
               ))}
+
+              <Link to="/custM">
               <button className="dark" type="submit">Test</button>
+              </Link>
+
               </form>
             </div>
 

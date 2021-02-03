@@ -14,12 +14,12 @@ export default function Login(){
 
               <form action="/custM">
 
-              <div className="userInput">
+              <div className="userInput" id="unameLogin">
                 <label for="uname">Username</label>
                 <span><input type="text" id="uname" name="uname" required/></span>
               </div>
 
-              <div className="userInput">
+              <div className="userInput" id="passLogin">
                 <label for="pass">Password</label>
                 <span><input type="password" id="pass" name="pass" required/></span>
               </div>

@@ -5,6 +5,11 @@
 @import "_queries";
 @import "_Login";
 @import "_header";
+@import "_mainContent";
+@import "_footer";
+@import "_dropdown";
+@import "_deliver";
+@import "_custAcc";
 
 a {
 	text-decoration: none;
@@ -78,7 +83,7 @@ button {
 	background-color: $dark;
 	color: white;
 	&:hover {
-		background-color: $bg_dark;
+		background-color: $bg_dark!important;
 	}
 }
 .light {
