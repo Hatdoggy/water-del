@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
-import Header from './Header.jsx'
-import Footer from "./Footer.jsx"
+import {Header,Footer,Dropdown} from './components.js'
 import AccDet from "./AccDet.jsx"
+import {Collapse} from "@material-ui/core"
 
 export default function CustAcc(){
 
@@ -15,11 +15,16 @@ export default function CustAcc(){
       console.log(btn);
     }
 
-  return(
+  return(<div>
+<Header click={clicked} button={btn}/>
+<Collapse in={btn}><Dropdown/></Collapse>
+
     <div className="custAcc">
-      <Header click={clicked} button={btn}/>
+
       <AccDet/>
-      <Footer/>
+
     </div>
+      <Footer/>
+</div>
   );
 }

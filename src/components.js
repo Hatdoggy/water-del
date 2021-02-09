@@ -4,3 +4,7 @@ export {default as Login} from './Login.jsx'
 export {default as Main} from "./Customer_main.jsx"
 export {default as Delivery} from "./Delivery.jsx"
 export {default as CustAcc} from "./CustAcc.jsx"
+export {default as Header} from "./Header.jsx"
+export {default as Footer} from "./Footer.jsx"
+export {default as Dropdown} from "./Dropdown.jsx"
+export {default as AdminDash} from "./AdminDash.jsx"

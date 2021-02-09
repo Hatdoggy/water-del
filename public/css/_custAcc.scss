@@ -2,19 +2,48 @@
 
 .custAcc{
   display: flex;
+  width: 100%;
+  margin-top: 5%;
   justify-content: center;
-  align-items: center;
+
   .accDet{
-    display: flex;
-    flex-wrap: wrap;
-    .userInput{
-      input{
-        color:$dark;
-        border:1px solid $dark;
+    width: 50%;
+    margin-bottom: 5%;
+    section{
+      color: $dark;
+      display: flex;
+      align-items: center;
+      p{
+        width: 50%;
+        float: left;
       }
-      label{
-        color:$dark;
+      img{
+        width: 350px;
+        margin-left: 5%;
+        float: right;
       }
     }
+    .userInput{
+      label,input{
+        color:$dark;
+        margin-bottom:2%;
+      }
+      label{
+        float: left;
+        i{
+          margin-right: 10px;
+          font-size: 16px;
+        }
+      }
+      input{
+        border:1px solid $dark;
+        float: right;
+      }
+    }
+    .dark{
+      width: 50%!important;
+      float: right;
+    }
+
   }
 }

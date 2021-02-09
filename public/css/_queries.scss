@@ -1,5 +1,27 @@
 @media screen and (max-width: 1000px) {
 
+	.custAcc{
+		display: flex;
+		width: 100%!important;
+		margin-top: 5%!important;
+			.accDet{
+				width: 100%!important;
+				margin: 10%!important;
+				section{
+					flex-direction: column;
+					p{
+						width: 100%;
+						text-align: center;
+					}
+					img{
+						width: 180px!important;
+						margin-left: 30%;
+						float: none;
+					}
+				}
+			}
+	}
+
 	.delivery-reg{
 		margin-top: 5%!important;
 		margin-left: 15%!important;
@@ -9,8 +31,9 @@
 	.delivery-img{
 		margin-right: 0;
 		img{
-			max-width: 300px;
+			max-width: 300px!important;
 			margin-top: 5%;
+			margin-left: 5%;
 		}
 	}
 
@@ -146,8 +169,7 @@
 		flex-direction: row!important;
 		height: 100%!important;
 		width: auto;
-		margin: 3%;
-		padding: 5%;
+		margin-top: 10%;
 	}
 	.text {
 		display: flex;
