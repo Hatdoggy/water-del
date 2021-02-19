@@ -3,11 +3,13 @@ import {Header,Footer,Dropdown} from './components.js'
 import AccDet from "./AccDet.jsx"
 import {Collapse} from "@material-ui/core"
 
-export default function CustAcc(){
+export default function CustAcc(prop){
 
     const [btn,updBtn] = useState(false);
     document.querySelector("#landing").style.display = "block";
     document.querySelector("#landing").style.background = "white";
+
+    console.log(prop.info.add);
 
     function clicked(event){
       event?updBtn(false):updBtn(true);
@@ -15,16 +17,9 @@ export default function CustAcc(){
       console.log(btn);
     }
 
-  return(<div>
-<Header click={clicked} button={btn}/>
-<Collapse in={btn}><Dropdown/></Collapse>
-
+  return(
     <div className="custAcc">
-
-      <AccDet/>
-
+      <AccDet info={prop.info} func={prop.upd}/>
     </div>
-      <Footer/>
-</div>
   );
 }

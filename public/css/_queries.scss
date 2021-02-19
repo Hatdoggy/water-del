@@ -22,6 +22,18 @@
 			}
 	}
 
+	.deli-history{
+		flex-direction: column!important;
+		h3{
+			text-align: center;
+		}
+	}
+
+	.modal-content{
+		width: auto!important;
+		margin:3%!important;
+	}
+
 	.delivery-reg{
 		margin-top: 5%!important;
 		margin-left: 15%!important;
@@ -34,6 +46,9 @@
 			max-width: 300px!important;
 			margin-top: 5%;
 			margin-left: 5%;
+		}
+		.alert{
+			margin-left:5%;
 		}
 	}
 

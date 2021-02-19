@@ -19,13 +19,35 @@
       margin:1%;
     }
   }
-
 }
+
+  .deli-history{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color:$dark;
+    width: 50%;
+    margin-left:20%;
+    padding: 5%;
+    .detail{
+      margin:3%;
+      border:2px solid $dark;
+      padding:20px;
+    }
+    #total{
+      display: flex;
+    }
+  }
 
 .delivery-img{
   img{
     max-width: 350px;
     height: auto;
+  }
+  .alert{
+    color:$dark;
+    margin-left:15%;
+    text-align: center;
   }
   margin-right: 10%;
 }

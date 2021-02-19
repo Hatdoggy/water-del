@@ -9,6 +9,11 @@ header{
   box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
   overflow: hidden;
   position: relative;
+  h2,a{
+    &:hover{
+      cursor: pointer;
+    }
+  }
   ul {
   list-style-type: none;
   margin: 0;

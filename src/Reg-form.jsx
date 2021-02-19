@@ -1,12 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 export default function RegForm(prop) {
-  console.log("Hello");
+
+  const name = prop.name;
+
   return (
     <div className="userInput">
       <label for={prop.for}>{prop.label}</label>
-      <input type={prop.type} id={prop.id} name={prop.name} required/>
+      <input type={prop.type} id={prop.id} name={prop.name} value={prop.values[name]} onChange={prop.change} required/>
     </div>
-
 );
 }

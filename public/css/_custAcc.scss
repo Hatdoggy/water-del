@@ -22,6 +22,11 @@
         margin-left: 5%;
         float: right;
       }
+      button{
+        &:hover{
+          cursor: pointer;
+        }
+      }
     }
     .userInput{
       label,input{

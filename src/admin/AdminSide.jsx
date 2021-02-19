@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function AdminDash(){
+export default function AdSide(){
   return(
-    <aside>
+    <aside className="adminSide">
 
       <div className="welcome">
         <h4>Welcome</h4>
@@ -18,7 +18,6 @@ export default function AdminDash(){
         </ul>
 
       </nav>
-
 
     </aside>
   );

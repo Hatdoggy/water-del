@@ -2,9 +2,10 @@ import React from 'react'
 import Device from '@material-ui/icons/ImportantDevicesRounded';
 import Event from '@material-ui/icons/EventRounded';
 import Todo from '@material-ui/icons/AssignmentRounded';
-import {Link} from "react-router-dom"
 
 export default function Content(prop){
+
+
   return(
     <div className="mainContent">
       <div className="stepContainer">
@@ -36,9 +37,9 @@ export default function Content(prop){
       <div className="mainImgText">
         <h4>Test</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur augue quis tellus dapibus, vitae egestas metus cursus.</p>
-        <Link to="/deliv">
-        <button className="dark">Book Delivery</button>
-        </Link>
+
+        <button onClick={()=>prop.update("deliv")} className="dark">Book Delivery</button>
+
       </div>
 
 

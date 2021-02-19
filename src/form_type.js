@@ -1,6 +1,6 @@
 const form = [
   {
-    label:"Full Name",
+    label:"First Name",
     for:"fname",
     id:"fname",
     type:"text",

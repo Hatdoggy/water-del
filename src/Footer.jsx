@@ -1,14 +1,17 @@
 import React from 'react'
-import {Facebook,Instagram,Twitter} from '@material-ui/icons';
+import {Facebook,Instagram,Twitter,ShoppingCart} from '@material-ui/icons';
 
-export default function Footer(){
+export default function Footer(prop){
   return(
     <aside>
       <div className="footContent">
-        <Facebook/>
-        <Twitter/>
-        <Instagram/>
+        <a><ShoppingCart onClick={()=>prop.shop(true)} /></a>
+        <a><Facebook/></a>
+        <a><Twitter/></a>
+        <a><Instagram/></a>
       </div>
     </aside>
   );
 }
+
+// style={prop.mod&&{color:"green"}}

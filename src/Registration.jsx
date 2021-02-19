@@ -2,15 +2,36 @@ import React,{useState} from 'react'
 import Circles from './Circles.jsx'
 import Reg from "./Reg-form.jsx"
 import form_type from "./form_type.js"
-import {Link} from "react-router-dom"
+import {useHistory as history} from "react-router-dom"
 
-export default function Registration(){
+export default function Registration(props){
 
   const [btnState, updBtn] = useState(false);
 
-  function clicked(event){
-    console.log("Test");
-  }
+  const [values,updInput] = useState({
+    fname:"",
+    lname:"",
+    address:"",
+    num:"",
+    uname:"",
+    pass:""
+  });
+
+  function change(event){
+      updInput({
+        ...values,
+        [event.target.name]:event.target.value});
+      // console.log(input);
+      console.log(values);
+    }
+
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    props.history.push({
+      pathname: '/custM',
+      values
+    });
+  };
 
   return(<div >
       <Circles/>
@@ -21,20 +42,18 @@ export default function Registration(){
           <h2>Register Account</h2>
 
             <div className="form-reg">
-              <form action="/custM" onSubmit={clicked}>
+              <form action="/custM" onSubmit={handleOnSubmit}>
               {form_type.map((x,index) => (
-                <Reg key={index} for={x.for} label={x.label} name={x.name} id={x.id} type={x.type}/>
+                <Reg key={index} for={x.for} label={x.label} name={x.name} values={values} change={change} id={x.id} type={x.type}/>
               ))}
 
-              <Link to="/custM">
-              <button className="dark" type="submit">Test</button>
-              </Link>
+              <button className="dark" type="submit">Register</button>
 
               </form>
             </div>
 
 
-          <a href="/login" onClick={clicked}>Already have an account</a>
+          <a href="/login">Already have an account</a>
 
         </div>
 
