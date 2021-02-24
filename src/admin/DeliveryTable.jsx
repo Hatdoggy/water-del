@@ -2,26 +2,42 @@ import React from 'react'
 
 export default function DeliveryTable(){
   return(
-    <table>
-      <th>
-        <td>Delivery ID</td>
-        <td>Customer Name</td>
-        <td>Receiver Name</td>
-        <td>Drop-off Address</td>
-        <td>Number of Gallons</td>
-        <td>Backup Contact</td>
-        <td>Total Price</td>
-        <td>Status</td>
-      </th>
-      <tr>
-        <td>Sample</td>
-        <td>Sample</td>
-        <td>Sample</td>
-        <td>Sample</td>
-        <td>Sample</td>
-        <td>Sample</td>
-        <td>Sample</td>
-      </tr>
+    <table className="styled-table">
+      <thead>
+        <tr>
+          <th>Delivery ID</th>
+          <th>Customer Name</th>
+          <th>Receiver Name</th>
+          <th>Drop-off Address</th>
+          <th>Number of Gallons</th>
+          <th>Backup Contact</th>
+          <th>Total Price</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+        </tr>
+        <tr>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+          <td>Sample</td>
+        </tr>
+      </tbody>
     </table>
   );
 }

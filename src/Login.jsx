@@ -6,7 +6,6 @@ export default function Login(props){
 
   const [values,updVal] = useState({uname:"",pass:""});
 
-
   function change(event){
     updVal({
       ...values,
@@ -15,6 +14,7 @@ export default function Login(props){
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
+
     props.history.push({
       pathname: '/custM',
       values

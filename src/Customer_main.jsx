@@ -8,6 +8,7 @@ export default function Main(props){
 
   const [btn,updBtn] = useState(false);
   const [page,updPage] = useState("main");
+  const [admin,updAdmin] = useState(false);
   const [shop,updShop] = useState(false);
   const [mod,updMod] = useState(false);
   const [final,updFin] = useState({
@@ -19,6 +20,7 @@ export default function Main(props){
 
   let { uname,address,pass,num,fname,lname} =
     (props.location && props.location.values) || {};
+
 
   if(typeof address === "undefined"){
       address = sampleData.address;
@@ -62,6 +64,18 @@ export default function Main(props){
     }
   }
 
+  const handleOnSubmit = (event) => {
+    console.log(inf);
+    props.history.push({
+      pathname: '/adminDash',
+      deli
+    });
+  };
+
+  if((infos.uname === "admin" && infos.pass === "admin123")&&admin===false){
+    updAdmin(true);
+  }
+
   if(final.arr){
     console.log(list);
     console.log(deli);
@@ -77,7 +91,7 @@ export default function Main(props){
 
   return(
     <div>
-      <Header click={clicked} button={btn} user={infos.uname} update={updPage} list={list}/>
+      <Header click={clicked} button={btn} user={infos.uname} update={updPage} list={list} admin={admin} dash={handleOnSubmit}/>
       <Collapse in={btn}><Dropdown uname={infos.uname} update={updPage}/></Collapse>
 
       {page==="main"&& <Content btn={btn} update={updPage}/>}

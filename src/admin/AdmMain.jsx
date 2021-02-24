@@ -1,12 +1,13 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {CustTable,DeliveryTable} from "../components.js"
 
 export default function AdmMain(){
 
   const list = [
     {
       icons:"Earnings",
-      desc:"Coins"
+      desc:"coins"
     },
     {
       icons:"Most Active Day",
@@ -32,17 +33,22 @@ export default function AdmMain(){
 
   return(
     <section className="admin-main">
-
-      {list.map(x=>{
-        <div className="box">
-          <FontAwesomeIcon icon={x.icons}/>
-          <div className="right">
-            <h1>Value</h1>
-            <h4>{x.desc}</h4>
+      <div className="box-container">
+        {list.map((x,key)=>(
+          <div className="box">
+            <div className="icontainer">
+              <FontAwesomeIcon icon={x.desc} size = '3x'/>
+            </div>
+            <div className="right">
+              <h1>Value</h1>
+              <h4>{x.icons}</h4>
+            </div>
           </div>
-        </div>
-      })}
+        ))}
+      </div>
 
+      <CustTable/>
+      <DeliveryTable/>
     </section>
   );
 }

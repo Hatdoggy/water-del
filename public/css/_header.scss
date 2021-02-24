@@ -1,33 +1,36 @@
 header{
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
   background: map-get($main_gradient,"main");
   width: 100%;
   color: white;
   box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
   overflow: hidden;
   position: relative;
+
   h2,a{
     &:hover{
       cursor: pointer;
     }
   }
-  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-    li {
-      list-style-type: none;
-      float:left;
-      text-align: center;
-      margin-left:10%;
-      a{
-        display: block;
+  .header-btn{
+    z-index: 10;
+    margin-left: auto;
+    margin-right: 3%;
+    width: 100%;
+      ul{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        li{
+          display: inline;
+          margin-left:3%;
+          a{
+            display: inline-block;
+          }
+        }
       }
     }
-  }
 
   .circle1{
     top:30%;
@@ -44,17 +47,7 @@ header{
   flex-direction: column;
   width: 25%;
   white-space: normal;
-  p{
-    text-align: center
-  }
-}
-
-.header-btn{
-  width: 50%;
-  margin-left: 14%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  display: inline-block;
+  z-index: 10;
 }
 
 .mainImg{

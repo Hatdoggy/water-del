@@ -5,6 +5,14 @@ import {Fade} from "@material-ui/core"
 
 export default function Delivery(prop){
 
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = String(today.getFullYear());
+
+  today = yyyy+'-'+mm+'-'+dd;
+  let input = document.getElementById("dod");
+
   const [btn,updBtn] = useState(false);
   const [temp,updTemp] = useState({
     dateOfdelivery:"",
@@ -30,6 +38,7 @@ export default function Delivery(prop){
 
   const submit = (event) => {
     event.preventDefault();
+    console.log(temp.dateOfdelivery);
 
     prop.upd({
       dateOfdelivery:temp.dateOfdelivery,
@@ -41,7 +50,6 @@ export default function Delivery(prop){
 
     prop.mod(true);
 
-    // setTimeout(()=>updDisp(true), 5000);
     updDisp(true);
 
     setTimeout(()=>updDisp(false), 2000);
@@ -87,7 +95,7 @@ export default function Delivery(prop){
           <form onSubmit={!prop.fin.btn?submit:newDel}>
           <div className="userInput">
           <label for="dod"><i class="fa fa-calendar-o"/>Date of Delivery</label>
-          <input type="date" className="inpDel" name="dateOfdelivery" value={temp.dateOfdelivery} id="dod" onChange={change} required/>
+          <input type="date" className="inpDel" name="dateOfdelivery" value={temp.dateOfdelivery} id="dod" onChange={change} min={today} max='2022-01-01' required/>
           </div>
 
           <div className="userInput">

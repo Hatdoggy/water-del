@@ -1,52 +1,105 @@
 @import "_variables";
 
+.adminDash{
+  display: flex;
+  padding:5%;
+}
 
 .admin-main{
   display: flex;
   flex-wrap: wrap;
-  margin: 10% auto;
-  justify-content: space-between;
+  margin: auto;
+  justify-content: end;
   height: 100%;
   width: auto;
-  padding: 5%;
-  .box{
+  .box-container{
     display: flex;
-    justify-content: space-between;
-    border:2px solid $dark;
-    padding: 20px;
-    border-radius: 50px;
-    color: $dark;
-    width: 70%;
-    .right{
+    justify-content: end;
+    flex-wrap: wrap;
+    .icontainer{
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      h1,h4{
-        text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding:10px;
+    }
+    .box{
+      display: flex;
+      justify-content: space-between;
+      border:2px solid $dark;
+      padding: 20px;
+      border-radius: 50px;
+      color: $dark;
+      width: 250px;
+      margin:2%;
+        .right{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          h1,h4{
+          text-align: center;
+        }
       }
     }
   }
 }
 
-table{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5%;
-  th{
-    background: map-get($main_gradient,"test");
-    color:white;
-    text-align: center;
-  }
-  td{
-    margin: 2%;
-  }
-  tr,th{
-    border-bottom: 1px solid (linear-gradient(90deg, rgba(107,176,215,1) 4%, rgba(106,175,214,1) 12%, rgba(107,175,215,1) 28%, rgba(127,189,224,1) 48%, rgba(152,207,237,1) 71%, rgba(175,223,249,1) 87%));
-  }
-  tr{
-    color:$dark;
+// table{
+//   margin: 5%;
+//   .head{
+//     background: map-get($main_gradient,"test");
+//     color:white;
+//
+//   }
+//   tr,th{
+//     text-align: center;
+//   }
+//   tr{
+//     color:$dark;
+//     border-bottom: 1px solid $dark;
+//   }
+// }
+
+.styled-table {
+    margin-right: 25%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    thead {
+      tr{
+        background: map-get($main_gradient,"test");
+        color: #ffffff;
+        text-align: left;
+      }
+    }
+    th,td{
+      padding: 12px 15px;
+      text-align: center;
+    }
+    tbody{
+      tr{
+        border-bottom: 1px solid #dddddd;
+        color:$dark;
+        &:nth-of-type(even){
+          background-color: #f3f3f3;
+        }
+        &:last-of-type{
+          border-bottom: 2px solid rgba(107,175,215,0.5);
+        }
+      }
+    }
+}
+
+.cust{
+  th,td{
+  margin-right: 10%;
+  padding: 12px 42.5px;
+  text-align: center;
   }
 }
+
 
 .adminSide{
   display: flex;
@@ -70,8 +123,15 @@ table{
   nav{
     width: 100%;
     display: flex;
-    text-align: center;
-    margin-top: 30%;
+    ul,li{
+      text-align: center;
+      margin-top: 30%;
+      font-size: 16px;
+      li:hover{
+        cursor:pointer;
+        text-decoration: underline;
+      }
+    }
   }
   form{
     p{
