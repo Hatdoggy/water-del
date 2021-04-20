@@ -1,0 +1,21 @@
+@import "_variables";
+
+aside{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 5%;
+  .footContent{
+    display: flex;
+    flex-direction: column;
+    color: $dark;
+    padding: 1%;
+  }
+  a{
+    width: 5%;
+  }
+  path:hover{
+    color:#48b2e3;
+    cursor: pointer;
+  }
+}

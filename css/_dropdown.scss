@@ -1,0 +1,19 @@
+@import "_variables";
+
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $dark;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0,0,0,0.05);
+  a{
+    margin:5%;
+    &:hover{
+      text-decoration: underline!important;
+      text-decoration-color: $dark!important;
+      cursor:pointer;
+    }
+  }
+}

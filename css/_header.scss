@@ -1,0 +1,60 @@
+header{
+  display: flex;
+  align-items: center;
+  background: map-get($main_gradient,"main");
+  width: 100%;
+  color: white;
+  box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: relative;
+
+  h2,a{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .header-btn{
+    z-index: 10;
+    margin-left: auto;
+    margin-right: 3%;
+    width: 100%;
+      ul{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        li{
+          display: inline;
+          margin-left:3%;
+          a{
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+  .circle1{
+    top:30%;
+  }
+  .circle3{
+    left:70%;
+  }
+}
+
+.head-middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  white-space: normal;
+  z-index: 10;
+}
+
+.mainImg{
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.hidden-icon{
+  display: none;
+}

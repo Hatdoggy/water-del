@@ -1,0 +1,53 @@
+@import "_variables";
+
+.delivery-reg{
+  display: flex;
+  flex-direction: column;
+  color: $dark;
+  margin-left: 10%;
+  width: 50%;
+  margin-bottom: 2%;
+  .userInput{
+    margin:1%;
+    i{
+      margin-right: 5%;
+    }
+    input{
+      color: $dark !important;
+      border: 1px solid $dark !important;
+      width: 80%;
+      margin:1%;
+    }
+  }
+}
+
+  .deli-history{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color:$dark;
+    width: 50%;
+    margin-left:20%;
+    padding: 5%;
+    .detail{
+      margin:3%;
+      border:2px solid $dark;
+      padding:20px;
+    }
+    #total{
+      display: flex;
+    }
+  }
+
+.delivery-img{
+  img{
+    max-width: 350px;
+    height: auto;
+  }
+  .alert{
+    color:$dark;
+    margin-left:15%;
+    text-align: center;
+  }
+  margin-right: 10%;
+}

@@ -1,0 +1,54 @@
+@import "_variables";
+
+.custAcc{
+  display: flex;
+  width: 100%;
+  margin-top: 5%;
+  justify-content: center;
+
+  .accDet{
+    width: 50%;
+    margin-bottom: 5%;
+    section{
+      color: $dark;
+      display: flex;
+      align-items: center;
+      p{
+        width: 50%;
+        float: left;
+      }
+      img{
+        width: 350px;
+        margin-left: 5%;
+        float: right;
+      }
+      button{
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .userInput{
+      label,input{
+        color:$dark;
+        margin-bottom:2%;
+      }
+      label{
+        float: left;
+        i{
+          margin-right: 10px;
+          font-size: 16px;
+        }
+      }
+      input{
+        border:1px solid $dark;
+        float: right;
+      }
+    }
+    .dark{
+      width: 50%!important;
+      float: right;
+    }
+
+  }
+}

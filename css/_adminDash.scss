@@ -1,0 +1,141 @@
+@import "_variables";
+
+.adminDash{
+  display: flex;
+  padding:5%;
+}
+
+.admin-main{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: end;
+  height: 100%;
+  width: auto;
+  .box-container{
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    .icontainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:10px;
+    }
+    .box{
+      display: flex;
+      justify-content: space-between;
+      border:2px solid $dark;
+      padding: 20px;
+      border-radius: 50px;
+      color: $dark;
+      width: 250px;
+      margin:2%;
+        .right{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          h1,h4{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// table{
+//   margin: 5%;
+//   .head{
+//     background: map-get($main_gradient,"test");
+//     color:white;
+//
+//   }
+//   tr,th{
+//     text-align: center;
+//   }
+//   tr{
+//     color:$dark;
+//     border-bottom: 1px solid $dark;
+//   }
+// }
+
+.styled-table {
+    margin-right: 25%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    thead {
+      tr{
+        background: map-get($main_gradient,"test");
+        color: #ffffff;
+        text-align: left;
+      }
+    }
+    th,td{
+      padding: 12px 15px;
+      text-align: center;
+    }
+    tbody{
+      tr{
+        border-bottom: 1px solid #dddddd;
+        color:$dark;
+        &:nth-of-type(even){
+          background-color: #f3f3f3;
+        }
+        &:last-of-type{
+          border-bottom: 2px solid rgba(107,175,215,0.5);
+        }
+      }
+    }
+}
+
+.cust{
+  th,td{
+  margin-right: 10%;
+  padding: 12px 42.5px;
+  text-align: center;
+  }
+}
+
+
+.adminSide{
+  display: flex;
+  float:left;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 15%;
+  background:map-get($main_gradient,"vert");
+  div,nav{
+    color:white;
+    width: 100%;
+    li{
+      list-style:none;
+      margin-bottom: 30%;
+    }
+  }
+  div{
+    text-align: center;
+  }
+  nav{
+    width: 100%;
+    display: flex;
+    ul,li{
+      text-align: center;
+      margin-top: 30%;
+      font-size: 16px;
+      li:hover{
+        cursor:pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+  form{
+    p{
+      color:white;
+    }
+  }
+}
