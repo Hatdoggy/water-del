@@ -65,7 +65,6 @@ export default function Main(props){
   }
 
   const handleOnSubmit = (event) => {
-    console.log(inf);
     props.history.push({
       pathname: '/adminDash',
       deli
